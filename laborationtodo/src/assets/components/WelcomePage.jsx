@@ -14,7 +14,8 @@ const handlestart = () => {
 
   return (
     <div>
-      
+      <h1>Todo Lista</h1>
+      <button type='submit'>Starta</button>
     </div>
   )
 }
