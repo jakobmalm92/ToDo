@@ -1,7 +1,9 @@
-import { useState } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import WelcomePage from './assets/components/WelcomePage';
+import TodoPage from './assets/components/TodoPage';
+import './App.css';
 
-import './App.css'
-import { BrowserRouter } from 'react-router-dom'
+ 
 
 function App() {
   return (
@@ -17,3 +19,4 @@ function App() {
 }
 
 export default App;
+
