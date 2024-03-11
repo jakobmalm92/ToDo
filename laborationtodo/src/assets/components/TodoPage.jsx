@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useLocation } from 'react-router-dom'
+import TodoInput from './TodoInput';
 
 function TodoPage() {
 
     const location = useLocation();
     const {name} = location.state
+
+    const [todos, setTodos] = useState([]);
 
 //Lägga till en uppgift
     const addTodo = () => {
@@ -24,7 +27,8 @@ function TodoPage() {
     }
   return (
     <div>
-      
+      <h1>Välkommen {name}!</h1>
+      <TodoInput addTodo={addTodo}/>
     </div>
   )
 }

@@ -9,7 +9,7 @@ function WelcomePage() {
     const navigate = useNavigate(); // För att navigera till TodoPage
 
     const handleStart = () => {
-     navigate("/todo", {state: {name}})
+     navigate("/todo", {state: {name}}) //Navigerar det angivna namnet till todo sidan
     };
 
     return (
