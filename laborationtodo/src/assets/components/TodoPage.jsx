@@ -38,7 +38,7 @@ function TodoPage() {
 
     
   return (
-    <div>
+    <div className='todo-container'> 
       <h1>Välkommen {name}!</h1>
       <TodoInput addTodo={addTodo}/>
       <ul>

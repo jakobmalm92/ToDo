@@ -22,7 +22,7 @@ function TodoInput({ addTodo }) {
 
 
   return (
-    <div>
+    <div className='todo-container'>
       <form onSubmit={handleSubmit}> 
       <input type="text"
       placeholder='Lägg till en todo'
