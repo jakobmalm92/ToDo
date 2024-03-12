@@ -17,7 +17,7 @@ function WelcomePage() {
             <h1>Todo Lista</h1>
             <form onSubmit={handleStart}>
                 <input className="todo-input" type="text" placeholder='Skriv ditt namn' value={name} onChange={(e) => setName(e.target.value)} required />
-                <button type="submit">Starta</button> 
+                <button className='btn' type="submit">Starta</button> 
             </form>
         </div>
     );

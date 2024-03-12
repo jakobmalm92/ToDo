@@ -24,12 +24,12 @@ function TodoInput({ addTodo }) {
   return (
     <div className='todo-container'>
       <form onSubmit={handleSubmit}> 
-      <input type="text"
+      <input className='todo-input' type="text"
       placeholder='Lägg till en todo'
       value={todoName}
       onChange={handleInputChange}
       required />
-      <button type='submit'>Lägg till</button>
+      <button className='btn' type='submit'>Lägg till</button>
 
       </form>
     </div>

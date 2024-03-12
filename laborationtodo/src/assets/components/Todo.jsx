@@ -12,9 +12,9 @@ const Todo = ({ todo, index, removeTodo, todoCompleted }) => {
 
     // Rad 15 behövs ej
     return (
-        <li style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}> 
+        <li className='todo-item' style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}> 
             <span onClick={handleToggleCompletion}>{todo.text}</span>
-            <button onClick={handleRemoveClick}>Remove</button>
+            <button className='btn-todo' onClick={handleRemoveClick}>Ta bort</button>
         </li>
     );
 };
