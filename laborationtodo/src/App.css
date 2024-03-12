@@ -8,15 +8,15 @@ body {
 }
 
 .todo-container {
-  
   margin: 20px;
   padding: 20px;
 }
 
 .todo-input {
   margin: 10px;
-  padding: 10px;
+  padding: 10px 100px 10px 5px;
   cursor: pointer;
+  text-align: left;
   
 }
 
@@ -32,8 +32,10 @@ body {
   font-weight: bold;
 }
 
+
+
 .btn {
-  padding: 10px;
+  padding: 10px 20px;
   margin: 5px;
   letter-spacing: 1px;
 
@@ -45,6 +47,7 @@ body {
   font-size: 10px;
   background-color: rgb(244, 229, 229);
   color: rgb(14, 13, 13);
+  text-decoration: none;
 }
 
 ul {
