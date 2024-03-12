@@ -1,27 +1,22 @@
-import React from 'react'
+import React from 'react';
 
-function Todo() {
+const Todo = ({ todo, index, removeTodo, todoCompleted }) => {
+    const handleRemoveClick = () => {
+        removeTodo(index);
+    };
 
-
-    // Tar bort en todo från listan
-    const removeClick = () => {
-
-    }
-
-
-    //Hanterar om en todo är klar eller ej
     const handleToggleCompletion = () => {
+        todoCompleted(index);
+    };
 
-    }
 
+    // Rad 15 behövs ej
+    return (
+        <li style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}> 
+            <span onClick={handleToggleCompletion}>{todo.text}</span>
+            <button onClick={handleRemoveClick}>Remove</button>
+        </li>
+    );
+};
 
-
-  return (
-    <div>
-      <span onClick={handleToggleCompletion}>{todo.text}</span>
-      <button onClick={removeClick}>Remove</button>
-    </div>
-  )
-}
-
-export default Todo
+export default Todo;

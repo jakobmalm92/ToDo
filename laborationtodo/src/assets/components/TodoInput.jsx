@@ -1,14 +1,22 @@
 import React, { useState } from 'react'
 
-function TodoInput() {
+function TodoInput({ addTodo }) {
 
     const [todoName, SetTodoName] = useState("")
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (todoName.trim()) {
+           const formattedTodoName = todoName.charAt(0).toUpperCase() + todoName.slice(1);
+           addTodo(formattedTodoName);
+           SetTodoName("");
+        }
 
     }
 
-    const handleInputChange = () => {
+    const handleInputChange = (e) => {
+
+        SetTodoName(e.target.value);
 
     }
 

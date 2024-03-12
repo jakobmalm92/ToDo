@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import TodoInput from './TodoInput';
+import TodoItem from './Todo';
 
 function TodoPage() {
 
@@ -10,7 +11,11 @@ function TodoPage() {
     const [todos, setTodos] = useState([]);
 
 //Lägga till en uppgift
-    const addTodo = () => {
+    const addTodo = (todoName) => {
+
+        if (todoName.trim() !== "") {
+            setTodos([...todos, {text: todoName, completed: false}])
+        }
 
     }
 
@@ -25,10 +30,21 @@ function TodoPage() {
     const todoCompleted = () => {
 
     }
+
+    
   return (
     <div>
       <h1>Välkommen {name}!</h1>
       <TodoInput addTodo={addTodo}/>
+      <ul>
+            {todos.map((todo, index) => (
+                <TodoItem
+                    key={index}
+                    todo={todo}
+                   
+                />
+            ))}
+        </ul>
     </div>
   )
 }
