@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import TodoInput from './TodoInput';
-import TodoItem from './Todo';
+import Todo from './Todo';
 
 function TodoPage() {
 
@@ -21,7 +21,10 @@ function TodoPage() {
 
 
     //Ta bort en uppgift
-    const removeTodo = () => {
+    const removeTodo = (index) => {
+        const newTodos = [...todos];
+        newTodos.splice(index, 1)
+        setTodos(newTodos)
 
     }
 
@@ -38,9 +41,11 @@ function TodoPage() {
       <TodoInput addTodo={addTodo}/>
       <ul>
             {todos.map((todo, index) => (
-                <TodoItem
+                <Todo
                     key={index}
                     todo={todo}
+                    index={index}
+                    removeTodo={removeTodo}
                    
                 />
             ))}
