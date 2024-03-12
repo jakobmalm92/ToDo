@@ -30,8 +30,10 @@ function TodoPage() {
 
 
     // Markera om uppgiften är klar eller inte
-    const todoCompleted = () => {
-
+    const todoCompleted = (index) => {
+        const newTodos = [...todos];
+        newTodos[index].completed = !newTodos[index].completed;
+        setTodos(newTodos)
     }
 
     
@@ -46,6 +48,7 @@ function TodoPage() {
                     todo={todo}
                     index={index}
                     removeTodo={removeTodo}
+                    todoCompleted={todoCompleted}
                    
                 />
             ))}
